@@ -1,0 +1,6 @@
+.movies-group {
+    display: grid;
+    place-items: center;
+    grid-gap: 26px;
+    grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
+}
