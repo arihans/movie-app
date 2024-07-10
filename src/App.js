@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import MoviesGroup from './components/MoviesGroup';
 
@@ -23,10 +23,14 @@ const App = () => {
         const responseJson = await response.json();
 
         console.log(responseJson)
-        if(responseJson.results) {
+        if (responseJson.results) {
             setMovies(responseJson.results);
         }
     };
+
+    useEffect(() => {
+        document.title = "Movies";
+    }, []);
 
     useEffect(() => {
         let movieRequestTimeout = setTimeout(() => {
